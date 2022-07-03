@@ -1,0 +1,18 @@
+.card_loadout
+{
+    list-style-type: none;
+    border-radius: 12px;
+    border-color: #000000;
+    border: solid 1px;
+    display: flex;
+    max-width: 100%;
+    text-align: center;
+    background-color: #f97c77;
+}
+
+.card_loadout p
+{
+  color: white;
+  font-weight: bold;
+  padding: 0 1rem;
+}

@@ -1,0 +1,17 @@
+li
+{
+    padding: 5px;
+    margin: 5px;
+}
+
+.card
+{
+    list-style-type: none;
+    border-radius: 12px;
+    border-color: #000000;
+    border: solid 1px;
+    display: flex;
+    max-width: 80%;
+    text-align: center;
+    background-color: #5e9ce2;
+}

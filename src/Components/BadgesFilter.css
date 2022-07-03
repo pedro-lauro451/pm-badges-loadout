@@ -1,0 +1,47 @@
+.filter_card
+{
+    list-style-type: none;
+    border-radius: 12px;
+    border-color: #000000;
+    border: solid 1px;
+    display: inline-flex;
+    max-width: 100%;
+    text-align: center;
+    background-color: #fcb7d5;
+    margin: 10px;
+}
+
+.filter_card_bp
+{
+    list-style-type: none;
+    border-radius: 12px;
+    border-color: #000000;
+    border: solid 1px;
+    display: inline-flex;
+    max-width: 100%;
+    text-align: center;
+    background-color: #9cf499;
+    margin: 10px;
+}
+
+.filter_card p
+{
+    padding: 0.0rem 1rem;
+    color: #000000;
+}
+
+.filter_card select
+{
+    color: #000000;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+}
+
+.filter_card_bp select
+{
+    color: #000000;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+}
