@@ -7,6 +7,8 @@ const Badges = (props) =>
 {
     const [inputCategory, setCategory] = useState('None');
     const [inputBP, setBP] = useState('None');
+    const [inputAddMode, setAddMode] = useState(false);
+    var isCreatingLoadout;
 
     const selectedCategoryHandler = category =>
     {
@@ -18,6 +20,11 @@ const Badges = (props) =>
         setBP(bp);
     };
 
+    const newLoadoutHandler = (toggler) => {
+        isCreatingLoadout = toggler;
+        setAddMode(isCreatingLoadout);
+    };
+
     return(
         <div>
             <BadgesFilter currentCategory={inputCategory}
@@ -25,8 +32,8 @@ const Badges = (props) =>
                           currentBP={inputBP}
                           onSelectedBP={selectedBPHandler}
             />
-            <BadgesList filteredCategory={inputCategory} filteredBP={inputBP}/>
-            <Loadout/>
+            <BadgesList filteredCategory={inputCategory} filteredBP={inputBP} addMode={inputAddMode}/>
+            <Loadout onNewLoadout={newLoadoutHandler}/>
         </div>
     );
 };

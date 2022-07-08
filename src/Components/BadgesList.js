@@ -107,6 +107,10 @@ const BadgesList = (props) => {
         <li key={badge.key}>{badge.badgeName}</li>
         <li key={badge.key}>BP Needed: {badge.BP}</li>
         <li key={badge.key}>{badge.badgeEffect}</li>
+        <li key={badge.key}>{props.addMode.toString()}</li>
+        <li>
+            <button className="add-badge" type="submit">Add</button>
+        </li>
         </ul>) 
 
         : props.filteredCategory === "All" || props.filteredBP === "All" ? 
@@ -114,14 +118,18 @@ const BadgesList = (props) => {
         <li key={badge.key}>{badge.badgeName}</li>
         <li key={badge.key}>BP Needed: {badge.BP}</li>
         <li key={badge.key}>{badge.badgeEffect}</li>
+        <li key={badge.key}>{props.addMode.toString()}</li>
+        <li>
+            <button className="add-badge" type="submit">Add</button>
+        </li>
         </ul>) : null
     );
 
-    return(
-        <div align="center">
+        return(
+            <div align="center">
             {listBadges}
-        </div>
-    );
+            </div>  
+        );          
 };
 
 export default BadgesList;

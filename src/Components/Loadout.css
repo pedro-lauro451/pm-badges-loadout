@@ -2,12 +2,11 @@
 {
     list-style-type: none;
     border-radius: 12px;
-    border-color: #000000;
-    border: solid 1px;
+    border: solid 1px  #000000;
     display: flex;
     max-width: 100%;
     text-align: center;
-    background-color: #f97c77;
+    background-color: #9296f9;
 }
 
 .card_loadout p
@@ -16,3 +15,6 @@
   font-weight: bold;
   padding: 0 1rem;
 }
+
+
+
