@@ -101,15 +101,15 @@ const BadgesList = (props) => {
         }
     ];
 
+
     const listBadges = BADGES.map( (badge) =>
         props.filteredCategory === badge.badgeCategory || props.filteredBP === badge.BP  ? 
         (<ul className="card">
         <li key={badge.key}>{badge.badgeName}</li>
         <li key={badge.key}>BP Needed: {badge.BP}</li>
         <li key={badge.key}>{badge.badgeEffect}</li>
-        <li key={badge.key}>{props.addMode.toString()}</li>
         <li>
-            <button className="add-badge" type="submit">Add</button>
+            <button className={(props.addMode === false ? 'add-badge' : 'deactivated')} type="submit">Add</button>
         </li>
         </ul>) 
 
@@ -118,9 +118,8 @@ const BadgesList = (props) => {
         <li key={badge.key}>{badge.badgeName}</li>
         <li key={badge.key}>BP Needed: {badge.BP}</li>
         <li key={badge.key}>{badge.badgeEffect}</li>
-        <li key={badge.key}>{props.addMode.toString()}</li>
         <li>
-            <button className="add-badge" type="submit">Add</button>
+            <button className={(props.addMode === false ? 'add-badge' : 'deactivated')} type="submit">Add</button>
         </li>
         </ul>) : null
     );

@@ -4,7 +4,7 @@ import "./NewLoadout.css";
 const NewLoadout = (props) => {
 
     const [inputToggler, setToggler] = useState(false);
-    const [inputName, setInputName] = useState();
+    const [inputName, setInputName] = useState('');
 
     var isCreatingLoadout;
 
@@ -37,6 +37,17 @@ const NewLoadout = (props) => {
         event.preventDefault();
     };
 
+    const newLoadoutSubmitHandler = (event) =>
+    {
+        event.preventDefault();
+        const newLoadoutData =
+        {
+            name: inputName
+        };
+
+        props.onSaveLoadoutData(newLoadoutData);
+    }
+
     if(inputToggler === false)
     {
         return(
@@ -52,7 +63,7 @@ const NewLoadout = (props) => {
     if(inputToggler === true)
     {
         return(
-            <form className="new-badge">
+            <form className="new-badge" onSubmit={newLoadoutSubmitHandler}>
                  <div>
                     <label>Name&nbsp;</label>
                     <input type="text" value={inputName} onChange={nameChangeHandler}></input>

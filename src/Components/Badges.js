@@ -7,7 +7,7 @@ const Badges = (props) =>
 {
     const [inputCategory, setCategory] = useState('None');
     const [inputBP, setBP] = useState('None');
-    const [inputAddMode, setAddMode] = useState(false);
+    const [inputAddMode, setAddMode] = useState(true);
     var isCreatingLoadout;
 
     const selectedCategoryHandler = category =>

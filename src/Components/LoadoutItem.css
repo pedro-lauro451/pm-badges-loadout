@@ -1,0 +1,16 @@
+.card_loadout_item
+{
+    list-style-type: none;
+    border-radius: 12px;
+    border: solid 1px  #000000;
+    display: inline-block;
+    text-align: center;
+    background-color: #92e6f9;
+    padding: 10px;
+    margin: 10px;
+}
+
+.card_loadout_item:hover{
+    background-color: #68bfd3;
+    cursor: pointer;
+}
